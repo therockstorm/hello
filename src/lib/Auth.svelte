@@ -1,22 +1,22 @@
 <script lang="ts">
-  import { supabase } from "./supabase"
+  import { supabase } from "./supabase";
 
-  let loading = false
+  let loading = false;
   let email: string | undefined;
 
   const handleLogin = async () => {
     try {
-      loading = true
-      const { error } = await supabase.auth.signIn({ email })
-      if (error) throw error
-      alert('Check your email for the login link!')
+      loading = true;
+      const { error } = await supabase.auth.signIn({ email });
+      if (error) throw error;
+      alert("Check your email for the login link!");
     } catch (error) {
       const e = error as any;
-      alert(e.error_description || e.message)
+      alert(e.error_description || e.message);
     } finally {
-      loading = false
+      loading = false;
     }
-  }
+  };
 </script>
 
 <form class="row flex flex-center" on:submit|preventDefault={handleLogin}>
@@ -32,7 +32,12 @@
       />
     </div>
     <div>
-      <input type="submit" class='button block' value={loading ? "Loading" : "Send magic link"} disabled={loading} />
+      <input
+        type="submit"
+        class="button block"
+        value={loading ? "Loading" : "Send magic link"}
+        disabled={loading}
+      />
     </div>
   </div>
 </form>
