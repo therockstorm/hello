@@ -21,5 +21,6 @@
     "paths": { "$lib": ["src/lib"], "$lib/*": ["src/lib/*"] },
     "target": "ES2020"
   },
-  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
+  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"],
+  "exclude": ["src/**/*.spec.ts"]
 }

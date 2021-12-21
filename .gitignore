@@ -5,7 +5,7 @@ yarn-error.log*
 
 /.output
 /.svelte-kit
-/.vercel
+/.vercel*
 /build
 /node_modules
 /package
