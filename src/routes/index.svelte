@@ -16,7 +16,7 @@
 </script>
 
 <section>
-  <h1>Hello, world!</h1>
+  <h1 class="text-blue-600">Hello, world!</h1>
   <div class="container" style="padding: 50px 0 100px 0;">
     {#if $user}
       <Profile />

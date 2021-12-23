@@ -34,7 +34,7 @@
     <div>
       <input
         type="submit"
-        class="button block"
+        class="btn btn-primary"
         value={loading ? "Loading" : "Send magic link"}
         disabled={loading}
       />
